@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.slideImage{
+  font-size: 40px;
+  display: flex;
+  border-radius: 2rem;
+  height: 25rem;
+  width: 100%;
+}
+
+
+
