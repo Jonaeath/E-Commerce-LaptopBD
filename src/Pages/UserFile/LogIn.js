@@ -31,7 +31,6 @@ const LogIn = () => {
   };
 
   const handelGoogleSignIn = () =>{
-
     googleSignIn(googleProvider)
     .then(result =>{
         const user = result.user;

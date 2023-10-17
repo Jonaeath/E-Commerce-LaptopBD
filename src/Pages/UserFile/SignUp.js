@@ -19,15 +19,30 @@ const navigate = useNavigate()
         .then(result => {
             const user = result.user;
             console.log(user);
-            if(createUser){
+            if(user){
                 alert('Your SignUp Complete Successfully')
+                saveUser(name, email); 
                 form.reset()
-                navigate('/login')
             }
         })
         .catch(err => console.error(err))
 }
- 
+// Function for send data Database 75.3
+const saveUser = (name,email) =>{
+  const user = {name, email};
+  fetch('http://localhost:4000/users',{
+        method:'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body: JSON.stringify(user)
+    }) 
+    .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    navigate('/login')
+  })      
+        }
 
   return (
     <div>

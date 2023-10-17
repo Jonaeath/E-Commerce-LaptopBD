@@ -37,7 +37,7 @@ const Cart = () => {
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
-            <tr>
+            <tr className="font-bold text-xl text-amber-950">
               <th></th>
               <th>Name & Address</th>
               <th>Products Name</th>
