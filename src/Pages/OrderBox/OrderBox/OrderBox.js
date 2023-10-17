@@ -15,7 +15,6 @@ const OrderBox = () => {
     const address = form.address.value;
     const quantity = form.quantity.value;
     const email = user?.email || "unregister";
-    console.log(customerName,phoneNumber,address)
     
     const totalPrice = price*quantity;
     
@@ -53,7 +52,7 @@ const OrderBox = () => {
             
         }
         form.reset()
-        navigate('/cart') 
+        navigate('/dashboard') 
     })
     .catch(error =>console.error(error))
   }
